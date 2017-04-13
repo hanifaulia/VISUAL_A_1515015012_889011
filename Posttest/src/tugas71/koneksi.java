@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugas6;
+package tugas71;
 
 
 import java.sql.*;

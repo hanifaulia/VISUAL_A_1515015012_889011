@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugas6;
-import tugas71.fromdatabuku;
-import tugas71.koneksi;
+package tugas71;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -113,11 +111,11 @@ public class fromdatabuku extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null,"Data telah ada");
                     kebenaran=false;
                     break;
-                }
+                }// mencari apakah data yang akan dimasukan belum ada didatabase
             }
             if(kebenaran==true){
                 TambahData(judul, penulis, harga);
-            }
+            }//jika data yang akan dimasukan belum ada pada database method kemudian menjalankan fungsi untuk menambahkan data kedalam database
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -527,7 +525,7 @@ public class fromdatabuku extends javax.swing.JFrame {
         String penulis = cbpl.getSelectedItem().toString();
         String harga = txthrg.getText();
         TambahData(judul,penulis,harga);
-        validasi(judul, penulis, harga);
+        validasi(judul, penulis, harga);//memanggil method validasi dengan nilai parameter diambil dari tiga variabel diatas 
         
         InitTable();
         TampilData();
